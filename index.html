@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/mobile.css" >
+    <link rel="shortcut icon" href="img/logo.png">
+    <title>Jess y las cosas web</title>
+</head>
+<body class="body">
+    <div class="container-grid">
+        <header class="header">
+            <img class="header__img" id= "logo" src="img/logo.png" alt='"A" de ALURA'>
+        </header>
+        
+        <main class="main">
+            <section class="main__section">                
+                <textarea class="section__textarea"  type="text" rows="7" id="ingresarTexto" placeholder="Ingresa el texto, por favor..."></textarea>
+                <p class="p main__p"> *Solo minúsculas, sin tíldes ni caracteres especiales. ¡Gracias! </p>
+                <button class="btn btnEncriptar " id="encriptar" > Encriptar </button>
+                <button class="btn btnDesencriptar " id="desencriptar"> Desencriptar </button>
+            </section>
+        </main>
+        
+        <aside class="aside">
+            <figure class="figuraMunieco"> 
+            <img id="munieco" src="img/chico.png"
+                alt="Muñeco con lupa" >
+                <figcaption></figcaption>
+            </figure>
+            
+            <textarea class="aside__textarea" type="text" readonly="readonly" rows="10" id="mostrarTexto"  placeholder="Ningún mensaje fue encontrado"></textarea>
+            <p class="p aside__p"> 
+                Ingresa el texto que desees encriptar o desencriptar. 
+            </p>
+            <button hidden class="btn btnCopiar" id="copiar"> Copiar </button>
+        </aside>
+    </div>
+        <footer class="footer">
+            <p class="p footer__p"> FILIUUUUUS </p>
+        </footer>
+    <script src="js/javaScript.js"></script>
+</html>

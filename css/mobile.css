@@ -1,0 +1,210 @@
+:root {
+    --blue: #0A3871;
+    --blue-dark: #052051;
+    --white: #fff;
+    --background:#E5E5E5;
+    --gray-500: #343A40;
+}
+.container-grid {
+    display: grid;
+    margin: 1.6rem;
+    align-items: center;
+    gap: 2.0rem; 
+}
+.header{
+    width: 100%;
+}
+.header__img {
+    width: 20%;
+    box-shadow: 1px 2px #4354bf ;
+}
+.main__section {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    gap: 1rem;
+}
+.section__textarea {
+    width: 100%;
+    height: fit-content;
+    color: var(--blue-dark);
+    background: transparent;
+    border: none;
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+    color: var(--blue-dark);
+}
+.main__p {
+    font-size: 1.5rem;
+    color: var(--gray-500)
+}
+.aside__textarea, .section__textarea:focus {
+    outline: none;
+}
+.section__textarea::placeholder {
+    padding: 1px;
+    font-weight: 400;
+    font-size: 2.4rem;
+    color: var(--blue-dark);
+}
+.btn {
+    width: 75%;
+    max-width: 300px ;
+    min-width: 100px;
+    height: 50px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.9rem;
+    border-radius: 2.4rem  ;
+    border: 1px solid var(--blue);
+}
+.btnEncriptar {
+    background-color: var(--blue-dark);
+    color: var(--white);
+}
+.btnDesencriptar,
+.btnCopiar {
+    color: var(--blue-dark);
+    background: transparent;
+}
+.aside {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    background-color: var(--white);
+}
+.aside__textarea  {
+    border: none;
+    width: 100%;
+    background: transparent;
+    text-align: center;
+    padding-top: 15px;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+}
+.aside__textarea::placeholder {
+    color: var(--gray-500);
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 120%;
+}
+.aside__p {
+    width: 100%;
+    height: 50px;
+    padding: 0 14px ;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 150%;
+    text-align: center;
+    color: var(--gray-500);
+}
+.footer{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 20vh;
+    background-color: var(--blue-dark);
+    
+}
+.footer__p {
+    width: fit-content;
+    height: auto;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+
+
+}
+
+@media (min-width: 600px) {
+    .header__img {
+        width: 100px;
+        box-shadow: 0 2px #4354bf
+}
+    .main__section {
+        display: grid;
+        grid-template-areas: "section__textarea section__textarea" 
+        "main__p main__p"
+        "btnEncriptar btnDesencriptar";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 60vh auto 10vh ;
+    }
+    .btnEncriptar {
+        grid-area: btnEncriptar;
+    }
+    .btnDesencriptar{
+        grid-area: btnDesencriptar;
+    }
+    .section__textarea {
+        grid-area: section__textarea;
+    }
+    .main__p {
+        grid-area: main__p;
+    }
+}
+@media (min-width: 1100px) {
+    .container-grid {
+        display: grid;
+        grid-template-areas: "header header aside"
+                             "main main aside";
+        grid-template-columns: auto auto 35%;
+        grid-template-rows: 10% 90% ;
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 4rem;
+    }
+    .header {
+        grid-area: header;
+    }
+    .header__img {
+        width: 10%;
+        box-shadow: none;
+    }
+    .main {
+        height: 100%;
+        grid-area: main;
+    }
+    .main__section,
+    .aside {
+        height: 100%;
+    }
+    .aside {
+        display: grid;
+        grid-template-areas: "figuraMunieco" 
+        "aside__textarea"
+        "aside__p"
+        "btnCopiar";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 40vh auto 10vh;
+        justify-items: center;
+        align-items: center;
+    }
+    .figuraMunieco {
+        width: 300px;
+        grid-area: figuraMunieco;
+    }
+    .aside__textarea {
+        height: 100px;
+        padding: 1rem;
+        grid-area: aside__textarea;
+    }
+    .aside__p {
+        grid-area: aside__p;
+    }
+    .btnCopiar {
+        grid-area: btnCopiar;
+    }
+    .aside {
+        height: 100%;
+        grid-area: aside;
+    }
+    .footer {
+        display: none;
+}
+}
